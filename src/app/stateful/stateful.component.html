@@ -3,15 +3,7 @@
 <main role="main" class="container">
     <div class="starter-template row">
         <div class="card col-3" *ngFor="let camiseta of shopModel.shopItems">
-            <img class="card-img-top" src="{{camiseta.picture}}" alt="{{camiseta.title}}">
-            <div class="card-body">
-                <h5 class="card-title">{{camiseta.title}}</h5>
-                <p class="card-text">{{camiseta.desc}}</p>
-                <p class="card-text">Precio:
-                    {{camiseta.price}}€</p>
-                <button href="#" class="btn btn-primary"
-                    (click)="clickItem(camiseta)">Comprar</button>
-            </div>
+            <app-stateless [product]="camiseta"></app-stateless>
         </div>
     </div>
     <ul class="list-group">
