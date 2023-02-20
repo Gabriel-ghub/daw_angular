@@ -1,0 +1,22 @@
+<button *ngIf="!isDisabled" (click)="showModal=true" type="button" class="btn btn-primary" data-toggle="modal"
+    datatarget="#exampleModal" [disabled]="isDisabled"> Confirmar compra
+</button>
+<div class="modal fade" [ngClass]="{'show': showModal}" id="exampleModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Compra confirmada</h5>
+                <button (click)="showModal=false" type="button" class="close" data-dismiss="modal" arialabel="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Felicitaciones, la compra fue realizada correctamente</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

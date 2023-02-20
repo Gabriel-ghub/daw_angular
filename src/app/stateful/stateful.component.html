@@ -1,12 +1,14 @@
-<h1>Stateful</h1>
-<p class="lead">Ejemplo de componete stateful.</p>
-<main role="main" class="container">
+<main role="main" class="container mt-5">
     <div class="starter-template row">
-        <div class="card col-3" *ngFor="let camiseta of shopModel.shopItems">
-            <app-stateless [product]="camiseta"></app-stateless>
+        <div class="col-12 col-md-3" *ngFor="let camiseta of shopModel.shopItems">
+            <app-stateless [product]="camiseta" (camisetaComprada)="camisetaComprada($event)"></app-stateless>
         </div>
+        <ul class="col-12 col-md-3 list-group">
+            <li *ngFor="let boughtItem of boughtItems" class="list-group-item">{{boughtItem.title}}
+                <span>{{boughtItem.price}}</span></li>
+            <h2>Total price: {{totalPrice()}}</h2>
+            <app-confirm></app-confirm>
+        </ul>
     </div>
-    <ul class="list-group">
-        <li *ngFor="let boughtItem of boughtItems" class="list-groupitem">{{boughtItem.title}}</li>
-    </ul>
+
 </main><!-- /.container -->

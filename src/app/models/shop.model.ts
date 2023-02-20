@@ -7,7 +7,7 @@ export class ShopModel {
         title: 'Camiseta Paisaje',
         desc: 'Camiseta con ilustaciones paisajisticas',
         picture: 'assets/camiseta1.jpg',
-        price: '164',
+        price: 164,
       },
       {
         title: 'Camiseta retrato',
